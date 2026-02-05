@@ -2,7 +2,7 @@ import pytest
 import os
 
 from flask import Flask, request
-from app.main import main
+from main import main
 
 @pytest.fixture
 def client() -> Flask.test_client:

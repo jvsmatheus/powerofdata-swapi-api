@@ -9,6 +9,11 @@ class ApiException(Exception):
 class BadRequestException(ApiException):
     status_code = 400
 
+class InvalidFilterException(ApiException):
+    status_code = 400
+        
+class InvalidSortException(ApiException):
+   status_code = 400
 
 class UnauthorizedException(ApiException):
     status_code = 401
