@@ -70,6 +70,13 @@ A API utiliza autenticação via header:
 | **Planets**   | `/api/planets`   | `name`, `climate`, `terrain`    | `name`, `climate`, `terrain`    |
 | **Starships** | `/api/starships` | `name`, `model`, `manufacturer` | `name`, `model`, `manufacturer` |
 
+## Exemplos de uso
+
+    GET /api/people?gender=male  
+    GET /api/people?name=luke&sort=name  
+    GET /api/people?name=luke&sort=-name  # field_name -> asc; -field_name -> desc
+    GET /api/films?director=lucas
+
 ### Fluxo da requisição
 
 ```text
