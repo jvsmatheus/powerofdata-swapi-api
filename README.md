@@ -6,6 +6,10 @@ autenticação via API Key.
 Foi desenvolvida com foco em simplicidade, testabilidade e
 pronta para deploy em Google Cloud Functions.
 
+## Link base da cloud function
+
+    https://us-central1-teste-swapi.cloudfunctions.net/swapi_api
+
 ## Arquitetura
 A aplicação segue uma separação clara de responsabilidades:
 
