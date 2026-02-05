@@ -16,11 +16,12 @@ class SwapiService:
             raise NotFoundException("No results found")
 
         results = apply_filters(results, params, resource)
-        results = apply_sort(results, params)
+        results = apply_sort(results, params, resource)
 
         response = ApiResponse(
             success=True,
-            data=results
+            data=results,
+            message="Data retrieved successfully"
         )
 
         return response
