@@ -1,3 +1,7 @@
+import os
+
+API_KEY = os.getenv("API_KEY")
+
 def test_list_people_success(client, monkeypatch):
     def mock_get(self, resource):
         return {
@@ -13,7 +17,7 @@ def test_list_people_success(client, monkeypatch):
 
     response = client.get(
         "/api/people",
-        headers={"x-api-key": "powerofdata-swapi-demo"}
+        headers={"x-api-key": API_KEY}
     )
 
     assert response.status_code == 200
@@ -39,7 +43,7 @@ def test_filter_people_by_gender(client, monkeypatch):
 
     response = client.get(
         "/api/people?gender=male",
-        headers={"x-api-key": "powerofdata-swapi-demo"}
+        headers={"x-api-key": API_KEY}
     )
 
     body = response.get_json()
@@ -63,7 +67,7 @@ def test_sort_people_by_name(client, monkeypatch):
 
     response = client.get(
         "/api/people?sort=name",
-        headers={"x-api-key": "powerofdata-swapi-demo"}
+        headers={"x-api-key": API_KEY}
     )
 
     body = response.get_json()
